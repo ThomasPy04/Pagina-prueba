@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alonso Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Imagenes 2023-2024/logo.png" class="logo">
+            <ul>
+                   <li><a href="#">Homa</a></li> 
+                   <li><a href="#">About</a></li> 
+                   <li><a href="#">Services</a></li> 
+                   <li><a href="#">Portfolio</a></li>
+                   <li><a href="#">Contact</a></li> 
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Fitness Coach</p>
+            <h1>Hi I'm <span>Alonso</span><br>From Alonso Fitness</h1>
+        </div>
+    </div>
+</div>
+<!----------About----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Imagenes 2023-2024/About-me1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Quia, aliquid architecto?
+                Sed minus aliquid hic, quibusdam unde vitae sit
+                provident? Lorem ipsum, dolor sit amet consectetur 
+                adipisicing elit. Praesentium, hic?</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Fitness</span><br>Yoga</li>
+                        <li><span>Yoga</span><br>Yoga</li>
+                        <li><span>Boxeo</span><br>Yoga</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Entrenamientos pesados</li>
+                        <li><span>2021 - 2022</span><br>Alimentacion y nutricion profesional</li>
+                        <li><span>2019 - 2020</span><br>Motivacion a entrenar</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2017</span><br>Como seguir avanzando</li>
+                        <li><span>2016</span><br>Nivel intermedio</li>
+                        <li><span>2015</span><br>Como empezar desde cero</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---My Services------>
+<div id="services">
+    
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+   
+    function opentab(tabname){
+        for(tablinks of tablinks){
+            tablinks.classList.remove("active-link");
+        }
+        for(tabcontents of tabcontents){
+            tabcontents.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+<!---revisar ABOUT ME porque no funciona bien active-tab -->
+
+
+
+</script>
+</body>
+</html>
